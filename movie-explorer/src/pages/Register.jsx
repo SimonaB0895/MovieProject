@@ -6,32 +6,26 @@ function Register() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  // const handleRegister = (e) => {
+  //   e.preventDefault();
+
+  //   // Можеш да добавиш fetch за запазване в JSON Server тук
+  //   console.log("Регистрация:", email, password);
+
+  //   navigate("/"); // Пренасочва към login
+  // };
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Можеш да добавиш fetch за запазване в JSON Server тук
-    console.log("Регистрация:", email, password);
-
-    navigate("/"); // Пренасочва към login
+    const newUser = { email, password };
+    localStorage.setItem("registeredUser", JSON.stringify(newUser));
+    navigate("/login");
   };
 
-  return (
-    <form onSubmit={handleRegister}>
+  return (//{handleRegister}>
+    <form onSubmit={handleSubmit}>
       <h2>Register</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
+      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
       <button type="submit">Register</button>
     </form>
   );
