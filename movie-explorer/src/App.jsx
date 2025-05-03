@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import MovieDetails from "./pages/MovieDetails";
+import MovieCatalog from "./pages/MovieCatalog";
 import Profile from "./pages/Profile";
 import { AuthContext, AuthProvider } from "./context/AuthContext";
 
@@ -24,7 +24,7 @@ function AppRoutes() {
         ) : (
           <>
             <Route path="/" element={<Home />} />
-            <Route path="/movies/:id" element={<MovieDetails />} />
+            <Route path="/movies/:id" element={<MovieCatalog />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<Navigate to="/" />} />
           </>
