@@ -24,7 +24,7 @@ function AppRoutes() {
         ) : (
           <>
             <Route path="/" element={<Home />} />
-            <Route path="/movies/:id" element={<MovieCatalog />} />
+            <Route path="/movies" element={<MovieCatalog />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<Navigate to="/" />} />
           </>
