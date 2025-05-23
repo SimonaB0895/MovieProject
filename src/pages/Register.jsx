@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css"; 
 
 function Register() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Register() {
   // };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newUser = { email, password };
+    const newUser = { email, password, username };
     localStorage.setItem("registeredUser", JSON.stringify(newUser));
     navigate("/login");
   };
@@ -66,10 +67,19 @@ function Register() {
         <div className="login-form">
           <h2 className="text">Sign up to Movie Explorer</h2>
           {<form onSubmit={handleSubmit}>
+            <div className="field">
+  <input
+    type="text"
+    placeholder="Име"
+    value={username}
+    onChange={(e) => setUsername(e.target.value)}
+    required
+  />
+</div>
        <div className="field">
            <input
             type="email"
-            placeholder="Имейл"
+            placeholder="E-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -78,7 +88,7 @@ function Register() {
         <div className="field">
           <input
             type="password"
-            placeholder="Парола"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required

@@ -6,6 +6,7 @@ import "./Login.css";
 
 
 function Login() {
+  const [username, setUsername] = useState(""); /////////////
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthContext);
@@ -54,38 +55,46 @@ function Login() {
   //       </div>
   //     </form>
   //   </div>
-<div className="login-page">
-
-    <div className="login-form-container">
-      <div className="login-form">
-        <div className="text">Вход</div>
-        <form onSubmit={handleSubmit}>
-          <div className="field">
-            <input
-              type="email"
-              placeholder="Имейл"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="field">
-            <input
-              type="password"
-              placeholder="Парола"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit">Вход</button>
-          <div className="link">
-            Нямаш акаунт? <Link to="/register">Регистрация</Link>
-          </div>
-        </form>
+  <div className="login-page">
+      <div className="login-form-container">
+        <div className="login-form">
+          <div className="text">Sign In to Movie Explorer</div>
+          <form onSubmit={handleSubmit}>
+            <div className="field">
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div className="field">
+              <input
+                type="email"
+                placeholder="E-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="field">
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit">Sign In</button>
+            <div className="link">
+              No account? <Link to="/register">Sign Up</Link>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 

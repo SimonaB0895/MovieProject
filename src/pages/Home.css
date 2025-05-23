@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  color: #c7c7c7;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #7125ff; /* акцентен лилав цвят */
+  text-shadow: 0 0 8px rgba(113, 37, 255, 0.6);
+}
+
+.home-container p {
+  font-size: 1.3rem;
+  max-width: 500px;
+  color: #aaa;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
