@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
 
-  if (!user) return null; // Не показваме navbar ако не е логнат
+  if (!user) return null; // Не показва navbar ако не е логнат
 
   return (
     <nav style={styles.nav}>
@@ -15,8 +15,9 @@ function Navbar() {
         <Link to="/profile" style={styles.link}>Profile</Link>
       </div>
       <div>
-        <span style={styles.user}>Welcome, {user.email}</span>
         <button onClick={logout} style={styles.button}>Logout</button>
+        <span style={styles.user}>Welcome, {user.username}</span>
+        
       </div>
     </nav>
   );

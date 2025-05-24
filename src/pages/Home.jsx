@@ -8,8 +8,8 @@ function Home() {
 
   return (
      <div className="home-container">
-      <h1>Здравей, {user?.username|| user?.email}!</h1>
-      <p>Използвай менюто, за да разгледаш разнообразието от филми.</p>
+      <h1>Hello, {user?.username|| user?.email}!</h1>
+      <p>Use the Catalog to see the variety of movies.</p>
     </div>
   );
 }
