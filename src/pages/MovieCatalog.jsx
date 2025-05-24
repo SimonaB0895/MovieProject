@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./MovieCatalog.css";
+
 
 function MovieCatalog() {
   const [movies, setMovies] = useState([]);
@@ -25,31 +27,24 @@ function MovieCatalog() {
 
 
   return (
-    <div>
-      <h2>Каталог с филми</h2>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", marginTop: "20px" }}>
-        {movies.map((movie) => (
-          <div
-            key={movie.imdbID}
-            style={{
-              border: "1px solid #ccc",
-              padding: "10px",
-              width: "200px",
-              textAlign: "center",
-            }}
-          >
-            <img src={movie.Poster} alt={movie.Title} style={{ width: "100%" }} />
-            <h4>{movie.Title}</h4>
-            <p>{movie.Year}</p>
-          </div>
-        ))}
-      </div>
+     <div className="movie-catalog">
+    <h2>Каталог с филми</h2>
+    <input
+      type="text"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      placeholder="Търси филм..."
+    />
+    <div className="movies-grid">
+      {movies.map((movie) => (
+        <div key={movie.imdbID} className="movie-card">
+          <img src={movie.Poster !== "N/A" ? movie.Poster : "/no-poster.png"} alt={movie.Title} />
+          <h4>{movie.Title}</h4>
+          <p>{movie.Year}</p>
+        </div>
+      ))}
     </div>
+  </div>
   );
 }
 
