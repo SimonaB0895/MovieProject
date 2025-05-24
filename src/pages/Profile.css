@@ -1,0 +1,22 @@
+.profile-container {
+  max-width: 600px;
+  margin: 95px 40px;
+  padding: 40px;
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #7125ff;
+  padding-bottom: 10px;
+}
+
+.profile-container p {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #ccc;
+}
