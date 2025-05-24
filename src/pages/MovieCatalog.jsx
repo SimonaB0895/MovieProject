@@ -28,7 +28,7 @@ function MovieCatalog() {
 
   return (
      <div className="movie-catalog">
-    <h2>Каталог с филми</h2>
+    <h2>Search for any movie</h2>
     <input
       type="text"
       value={searchTerm}
