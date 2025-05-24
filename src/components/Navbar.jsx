@@ -29,7 +29,7 @@ function Navbar() {
         <Link to="/profile">Profile</Link>
       </div>
       <div className="navbar-right">
-        <span className="navbar-user">Welcome, {user.username || user.email}</span>
+        <span className="navbar-user">{user.username || user.email}</span>
         <button onClick={logout} className="navbar-button">Logout</button>
       </div>
     </nav>
