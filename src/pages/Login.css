@@ -75,7 +75,7 @@ body {
   text-align: center;
 }
 
-.field input,
+.field input, .login-form
 button {
   width: 100%;
   height: 50px;
@@ -96,13 +96,13 @@ input:focus {
               inset 0 0 5px rgba(144, 0, 255, 0.1);
 }
 
-button {
+.login-form button {
   margin-top: 30px;
   font-weight: 600;
   cursor: pointer;
 }
 
-button:hover {
+.login-form button:hover {
   color: #7125ff;
   border-color: #7125ff;
   box-shadow: 0 0 10px rgba(102, 0, 255, 0.3);

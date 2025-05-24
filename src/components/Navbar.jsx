@@ -36,26 +36,26 @@ function Navbar() {
   );
 }
 
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "10px",
-    backgroundColor: "#222",
-    color: "#fff"
-  },
-  link: {
-    marginRight: "15px",
-    textDecoration: "none",
-    color: "#fff"
-  },
-  user: {
-    marginRight: "10px"
-  },
-  button: {
-    padding: "5px 10px",
-    cursor: "pointer"
-  }
-};
+// const styles = {
+//   nav: {
+//     display: "flex",
+//     justifyContent: "space-between",
+//     padding: "10px",
+//     backgroundColor: "#222",
+//     color: "#fff"
+//   },
+//   link: {
+//     marginRight: "15px",
+//     textDecoration: "none",
+//     color: "#fff"
+//   },
+//   user: {
+//     marginRight: "10px"
+//   },
+//   button: {
+//     padding: "5px 10px",
+//     cursor: "pointer"
+//   }
+//};
 
 export default Navbar;
