@@ -114,15 +114,30 @@ overflow-y: auto;
 
 .modal-content {
   background-color: #1e1e1e;
-  padding: 3px;
+  padding: 30px 20px;
   border-radius: 10px;
   color: #fff;
   width: 90%;
-  max-width: 700px;
+  max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 0 20px rgba(113, 37, 255, 0.5);
+  text-align: left; /* центрира текст и съдържание */
 }
+
+.modal-content img {
+  display: block;
+  margin: 0 auto 10px; /* центрира изображението и намалява разстоянието отдолу */
+  width: 250px;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.modal-content h2 {
+  margin-top: 0; /* премахва излишното разстояние отгоре */
+  margin-bottom: 10px; /* добавя малко разстояние под заглавието */
+}
+
 
 .modal-content button {
   margin-top: 20px;
