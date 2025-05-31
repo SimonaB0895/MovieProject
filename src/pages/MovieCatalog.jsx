@@ -78,12 +78,13 @@ const toggleLike = (imdbID) => {
             <p>{movie.Year}</p>
             <button
               className="like-btn"
-              onClick={() => toggleLike(movie.imdbID)}
-              title={likedMovies[movie.imdbID] ? "Отхаресване" : "Харесване"}
+              onClick={() =>{  
+              toggleLike(movie.imdbID)}}
+              title={likedMovies[movie.imdbID] ? "Dislike" : "Like"}
               style={{
                 position: "absolute",
-                bottom: "8px",
-                right: "8px",
+                bottom: "10px",
+                right: "10px",
                 background: "transparent",
                 border: "none",
                 padding: 0,
@@ -94,7 +95,7 @@ const toggleLike = (imdbID) => {
               <img
                 src={likedMovies[movie.imdbID] ? "/heart1.png" : "/heart2.png"}
                 alt={likedMovies[movie.imdbID] ? "Liked" : "Not liked"}
-                style={{ width: "24px", height: "24px" }}
+                style={{ width: "25px", height: "25px" }}
               />
             </button>
           </div>
