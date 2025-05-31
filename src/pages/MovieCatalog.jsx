@@ -11,6 +11,12 @@ function MovieCatalog() {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
+  const [likedMovies, setLikedMovies] = useState(() => {
+    // Зареждаме харесаните филми от localStorage (ако има)//////////////////////////////////////
+    const saved = localStorage.getItem("likedMovies");
+    return saved ? JSON.parse(saved) : {};
+  });
+
   const apiKey = import.meta.env.VITE_OMDB_API_KEY;
 
   useEffect(() => {
@@ -35,6 +41,19 @@ const fetchMovieDetails = async (id) => {
   setShowModal(true);
 };
 
+const toggleLike = (imdbID) => {
+    setLikedMovies((prev) => {
+      const newLikes = { ...prev };
+      if (newLikes[imdbID]) {
+        delete newLikes[imdbID];
+      } else {
+        newLikes[imdbID] = true;
+      }
+      localStorage.setItem("likedMovies", JSON.stringify(newLikes));
+      return newLikes;
+    });
+  };/////////////////////////////////////////
+
   return (
       <div className="movie-catalog">
       <h2>Search for any movie</h2>
@@ -42,7 +61,7 @@ const fetchMovieDetails = async (id) => {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Търси филм..."
+        placeholder="Search for a movie..."
       />
       <div className="movies-grid">
         {movies.map((movie) => (
@@ -57,6 +76,27 @@ const fetchMovieDetails = async (id) => {
             />
             <h4>{movie.Title}</h4>
             <p>{movie.Year}</p>
+            <button
+              className="like-btn"
+              onClick={() => toggleLike(movie.imdbID)}
+              title={likedMovies[movie.imdbID] ? "Отхаресване" : "Харесване"}
+              style={{
+                position: "absolute",
+                bottom: "8px",
+                right: "8px",
+                background: "transparent",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                userSelect: "none",
+              }}
+            >
+              <img
+                src={likedMovies[movie.imdbID] ? "/heart1.png" : "/heart2.png"}
+                alt={likedMovies[movie.imdbID] ? "Liked" : "Not liked"}
+                style={{ width: "24px", height: "24px" }}
+              />
+            </button>
           </div>
         ))}
       </div>
