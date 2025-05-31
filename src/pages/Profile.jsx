@@ -5,12 +5,12 @@ import "./Profile.css";
 function Profile() {
   const { user } = useContext(AuthContext);
 
-  if (!user) return <p>Няма активен потребител</p>;
+  if (!user) return <p>No active user</p>;
 
   return (
     <div className="profile-container">
       <h2>Профил</h2>
-      <p>Потребителско име: {user.username}</p>
+      <p>User name: {user.username}</p>
       <p>E-mail: {user.email}</p>
     </div>
   );

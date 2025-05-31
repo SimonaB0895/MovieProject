@@ -70,7 +70,7 @@ function Register() {
             <div className="field">
   <input
     type="text"
-    placeholder="Име"
+    placeholder="Username"
     value={username}
     onChange={(e) => setUsername(e.target.value)}
     required
