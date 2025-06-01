@@ -9,8 +9,8 @@
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.4); /* По-прозрачен */
-  backdrop-filter: blur(6px); /* Мек фон */
+  background-color: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(6px); 
   color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
@@ -58,9 +58,3 @@
 .navbar a:hover {
   text-shadow: 0 0 12px rgb(254, 255, 255);
 }
-/* .navbar-left,
-.navbar-right {
-  display: flex;
-  /* align-items: center;     вертикално центрира Welcome и бутона */
- /* gap: 10px;
-} */

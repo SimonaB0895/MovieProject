@@ -27,34 +27,6 @@ function Login() {
   };
 
   return (
-  // <div className="login-form">
-  //   <div className="login-image"></div>
-  //     <div className="text">Login</div>
-  //     <form onSubmit={handleSubmit}>
-  //       <div className="field">
-  //         <input
-  //           type="email"
-  //           placeholder="Email"
-  //           value={email}
-  //           onChange={(e) => setEmail(e.target.value)}
-  //           required
-  //         />
-  //       </div>
-  //       <div className="field">
-  //         <input
-  //           type="password"
-  //           placeholder="Password"
-  //           value={password}
-  //           onChange={(e) => setPassword(e.target.value)}
-  //           required
-  //         />
-  //       </div>
-  //       <button type="submit">Login</button>
-  //       <div className="link">
-  //         No account? <Link to="/register">Register here</Link>
-  //       </div>
-  //     </form>
-  //   </div>
   <div className="login-page">
       <div className="login-form-container">
         <div className="login-form">

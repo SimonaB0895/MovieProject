@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function MovieCatalog() {
   const [movies, setMovies] = useState([]);
-  //const [search, setSearch] = useState("");
+ 
   const [searchTerm, setSearchTerm] = useState("Star Wars"); // По подразбиране
 
 

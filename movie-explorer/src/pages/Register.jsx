@@ -6,14 +6,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
 
-  //   // Можеш да добавиш fetch за запазване в JSON Server тук
-  //   console.log("Регистрация:", email, password);
-
-  //   navigate("/"); // Пренасочва към login
-  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = { email, password };
@@ -21,7 +14,7 @@ function Register() {
     navigate("/login");
   };
 
-  return (//{handleRegister}>
+  return (
     <form onSubmit={handleSubmit}>
       <h2>Register</h2>
       <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />

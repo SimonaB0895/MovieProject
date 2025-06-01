@@ -11,8 +11,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*login(email, password);  // Извиква login от контекста
-    navigate("/");*/
+   
     const savedUser = JSON.parse(localStorage.getItem("registeredUser"));
 
     if (savedUser && savedUser.email === email && savedUser.password === password) {

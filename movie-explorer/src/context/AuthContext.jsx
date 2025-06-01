@@ -14,10 +14,6 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
-    // // Фалшив логин — тук можеш да замениш с реална проверка чрез API
-    // const demoUser = { email };
-    // localStorage.setItem("user", JSON.stringify(demoUser));
-    // setUser(demoUser);
     const savedUser = JSON.parse(localStorage.getItem("registeredUser"));
   if (savedUser && savedUser.email === email && savedUser.password === password) {
     localStorage.setItem("user", JSON.stringify(savedUser));
